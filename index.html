@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Switch Statement</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        select,
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #result {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Days of the Week</h1>
+
+        <p>Select a day number:</p>
+
+        <select id="day">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+
+        <br>
+
+        <button onclick="showDay()">Show Day</button>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function showDay() {
+            let day = Number(document.getElementById("day").value);
+            let message;
+
+            switch (day) {
+                case 1:
+                    message = "Monday";
+                    break;
+
+                case 2:
+                    message = "Tuesday";
+                    break;
+
+                case 3:
+                    message = "Wednesday";
+                    break;
+
+                case 4:
+                    message = "Thursday";
+                    break;
+
+                case 5:
+                    message = "Friday";
+                    break;
+
+                case 6:
+                    message = "Saturday";
+                    break;
+
+                case 7:
+                    message = "Sunday";
+                    break;
+
+                default:
+                    message = "Invalid day";
+            }
+
+            document.getElementById("result").textContent = message;
+        }
+    </script>
+
+</body>
+
+</html>
